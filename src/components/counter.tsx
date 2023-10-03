@@ -22,8 +22,8 @@ class Counter extends React.Component<any, any> {
         </View>
         <View style={styles.footer}>
           <Button
-            title="Go to Pokemon"
-            onPress={() => this.props.navigation.navigate('Pokemon')}
+            title="Go to RtxExample"
+            onPress={() => this.props.navigation.navigate('RtxExample')}
           />
         </View>
       </>
