@@ -1,29 +1,17 @@
 import React from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
-import { decrement, increment } from '../features/counter/counterSlice';
-import { connect } from 'react-redux';
-import { RootState } from '../app/store';
-class Counter extends React.Component<any, any> {
-  incrementCount = () => {
-    this.props.dispatch(increment());
-  };
 
-  decrementCount = () => {
-    this.props.dispatch(decrement());
-  };
-
+class Pokemon extends React.Component<any, any> {
   render() {
     return (
       <>
         <View style={styles.container}>
-          <Button title="increment" onPress={() => this.incrementCount()} />
-          <Text>{this.props.count}</Text>
-          <Button title="decrement" onPress={() => this.decrementCount()} />
+          <Text>Pokemon</Text>
         </View>
         <View style={styles.footer}>
           <Button
-            title="Go to Pokemon"
-            onPress={() => this.props.navigation.navigate('Pokemon')}
+            title="Go to Counter"
+            onPress={() => this.props.navigation.navigate('Counter')}
           />
         </View>
       </>
@@ -44,13 +32,15 @@ const styles = StyleSheet.create({
   },
 });
 
-const mapStateToProps = (state: RootState) => {
-  return {
-    count: state.counter.value,
-  };
-};
+// const mapStateToProps = (state: RootState) => {
+//   return {
+//     count: state.counter.value,
+//   };
+// };
 
-export default connect(mapStateToProps)(Counter);
+// export default connect(mapStateToProps)(Counter);
+
+export default Pokemon;
 
 // const mapStateToProps = (state) => {
 //   return {
