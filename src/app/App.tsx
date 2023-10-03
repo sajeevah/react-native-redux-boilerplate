@@ -1,8 +1,8 @@
 import React from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
-import { decrement, increment } from './src/features/counter/counterSlice';
+import { decrement, increment } from '../features/counter/counterSlice';
 import { connect } from 'react-redux';
-import { RootState } from './src/app/store';
+import { RootState } from './store';
 class App extends React.Component<any, any> {
   incrementCount = () => {
     this.props.dispatch(increment());
